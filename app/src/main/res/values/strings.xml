@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ftpZ</string>
+    <string name="tagline">Instant FTP server for your phone</string>
+    <string name="power_desc">Start or stop the FTP server</string>
+
+    <string name="status_off">OFFLINE</string>
+    <string name="status_on">ONLINE</string>
+    <string name="address_placeholder">ftp://—</string>
+    <string name="hint_start">Tap the power button to start sharing</string>
+    <string name="hint_running">Tap the address to copy it, then open it on your PC</string>
+
+    <string name="stat_clients">Clients</string>
+    <string name="stat_sent">Sent</string>
+    <string name="stat_received">Received</string>
+
+    <string name="settings_title">Server settings</string>
+    <string name="label_port">Port</string>
+    <string name="label_user">Username</string>
+    <string name="label_pass">Password</string>
+    <string name="label_root">Shared folder</string>
+    <string name="show">Show</string>
+    <string name="hide">Hide</string>
+
+    <string name="chip_storage">Storage</string>
+    <string name="chip_download">Download</string>
+    <string name="chip_dcim">DCIM</string>
+    <string name="chip_documents">Documents</string>
+    <string name="chip_pictures">Pictures</string>
+    <string name="chip_music">Music</string>
+
+    <string name="switch_readonly">Read-only (no uploads or deletes)</string>
+    <string name="switch_anon">Anonymous access (no password)</string>
+    <string name="warn_anon">Anyone on your network will be able to access the shared folder.</string>
+
+    <string name="log_title">Activity</string>
+    <string name="clear">Clear</string>
+    <string name="log_empty">No activity yet. Start the server and connect from any FTP client.</string>
+
+    <string name="howto_title">How to connect</string>
+    <string name="howto_body">1. Connect your phone and PC to the same Wi-Fi (or turn on your phone\'s hotspot and join it).\n2. Start the server with the power button.\n3. On Windows: open File Explorer, paste the address in the path bar. On Mac: Finder → Go → Connect to Server. Or use FileZilla, WinSCP, or any FTP app.\n4. Sign in with the username and password shown above.</string>
+
+    <string name="err_port">Port must be between 1024 and 65535</string>
+    <string name="err_user">Enter a username</string>
+    <string name="err_pass">Enter a password</string>
+    <string name="err_root">That folder does not exist</string>
+    <string name="err_wifi">No network found. Connect to Wi-Fi or turn on hotspot first.</string>
+    <string name="copied">Address copied</string>
+    <string name="perm_title">Storage access needed</string>
+    <string name="perm_msg">ftpZ needs permission to access files so it can share them. Tap Allow, enable access for ftpZ, then come back and tap the power button again.</string>
+    <string name="allow">Allow</string>
+    <string name="cancel">Cancel</string>
+    <string name="perm_denied">Storage permission denied</string>
+</resources>

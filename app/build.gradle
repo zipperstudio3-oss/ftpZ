@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ftpz.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.ftpz.app'
+        minSdk 26          // Android 8.0 and newer
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Signed with the debug key so the release APK installs straight away.
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+// No third-party libraries on purpose: fewer things to break in an online build.
+dependencies {
+}

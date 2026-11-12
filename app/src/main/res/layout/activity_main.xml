@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="28dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="22dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:background="@drawable/bg_logo"
+                android:contentDescription="@null"
+                android:padding="11dp"
+                android:src="@drawable/ic_z_mark" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tagline"
+                    android:textColor="@color/muted"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Hero card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="22dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:paddingTop="14dp">
+
+            <FrameLayout
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:clipChildren="false">
+
+                <View
+                    android:id="@+id/ring1"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:alpha="0"
+                    android:background="@drawable/bg_ring" />
+
+                <View
+                    android:id="@+id/ring2"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:alpha="0"
+                    android:background="@drawable/bg_ring" />
+
+                <ImageView
+                    android:id="@+id/powerButton"
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_power_off"
+                    android:contentDescription="@string/power_desc"
+                    android:padding="44dp"
+                    android:src="@drawable/ic_power" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/statusDot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/dot_off" />
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.12"
+                    android:text="@string/status_off"
+                    android:textColor="@color/text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addressText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_pill"
+                android:fontFamily="monospace"
+                android:paddingBottom="11dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="11dp"
+                android:text="@string/address_placeholder"
+                android:textColor="@color/accent"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/hintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/hint_start"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <LinearLayout style="@style/StatTile">
+
+                <TextView
+                    android:id="@+id/statClients"
+                    style="@style/StatValue"
+                    android:text="0" />
+
+                <TextView
+                    style="@style/StatLabel"
+                    android:text="@string/stat_clients" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/StatTile"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/statSent"
+                    style="@style/StatValue"
+                    android:text="0 B" />
+
+                <TextView
+                    style="@style/StatLabel"
+                    android:text="@string/stat_sent" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/StatTile">
+
+                <TextView
+                    android:id="@+id/statReceived"
+                    style="@style/StatValue"
+                    android:text="0 B" />
+
+                <TextView
+                    style="@style/StatLabel"
+                    android:text="@string/stat_received" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Settings -->
+        <LinearLayout
+            android:id="@+id/settingsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/settings_title" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/label_port" />
+
+            <EditText
+                android:id="@+id/editPort"
+                style="@style/Field"
+                android:digits="0123456789"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="5" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/label_user" />
+
+            <EditText
+                android:id="@+id/editUser"
+                style="@style/Field"
+                android:importantForAutofill="no"
+                android:inputType="textNoSuggestions" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/FieldLabel"
+                    android:text="@string/label_pass" />
+
+                <TextView
+                    android:id="@+id/btnShowPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="14dp"
+                    android:padding="4dp"
+                    android:text="@string/show"
+                    android:textColor="@color/accent"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editPass"
+                style="@style/Field"
+                android:importantForAutofill="no"
+                android:inputType="textPassword" />
+
+            <TextView
+                style="@style/FieldLabel"
+                android:text="@string/label_root" />
+
+            <EditText
+                android:id="@+id/editRoot"
+                style="@style/Field"
+                android:importantForAutofill="no"
+                android:inputType="textUri|textNoSuggestions" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chipStorage"
+                        style="@style/Chip"
+                        android:text="@string/chip_storage" />
+
+                    <TextView
+                        android:id="@+id/chipDownload"
+                        style="@style/Chip"
+                        android:text="@string/chip_download" />
+
+                    <TextView
+                        android:id="@+id/chipDcim"
+                        style="@style/Chip"
+                        android:text="@string/chip_dcim" />
+
+                    <TextView
+                        android:id="@+id/chipDocuments"
+                        style="@style/Chip"
+                        android:text="@string/chip_documents" />
+
+                    <TextView
+                        android:id="@+id/chipPictures"
+                        style="@style/Chip"
+                        android:text="@string/chip_pictures" />
+
+                    <TextView
+                        android:id="@+id/chipMusic"
+                        style="@style/Chip"
+                        android:text="@string/chip_music" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/stroke" />
+
+            <Switch
+                android:id="@+id/switchReadonly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/switch_readonly"
+                android:textColor="@color/text"
+                android:textSize="14sp" />
+
+            <Switch
+                android:id="@+id/switchAnon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:text="@string/switch_anon"
+                android:textColor="@color/text"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/warnAnon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/warn_anon"
+                android:textColor="@color/warn"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Activity log -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/SectionTitle"
+                    android:layout_centerVertical="true"
+                    android:text="@string/log_title" />
+
+                <TextView
+                    android:id="@+id/btnClearLog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="6dp"
+                    android:text="@string/clear"
+                    android:textColor="@color/accent"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/logText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="3dp"
+                android:minHeight="90dp"
+                android:padding="14dp"
+                android:textColor="@color/text"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- How to connect -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/howto_title" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:text="@string/howto_body"
+                android:textColor="@color/muted"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

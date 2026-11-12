@@ -9,24 +9,6 @@ Turn your Android phone into an FTP server with one tap. Share photos, videos an
 - Dark UI with a glowing power button, live stats and activity log
 - Adaptive launcher icon (with themed-icon support on Android 13+)
 
-## Get the APK without Android Studio
-
-**Option A: GitHub Actions (free, recommended)**
-1. Create a free GitHub account and a new repository.
-2. Upload everything from this folder (including the hidden `.github` folder).
-3. Open the repository's **Actions** tab and wait for "Build ftpZ APK" to finish (about 3 minutes).
-4. Open the finished run and download the **ftpZ-apk** artifact. Unzip it to get `app-debug.apk`.
-
-**Option B: online "zip to APK" builders**
-Upload `ftpZ.zip`. It is a standard Gradle project (`settings.gradle` at the top level, module in `app/`).
-Settings the builder should use: JDK 17, Android SDK platform 34, Gradle 8.7 (the wrapper is included).
-
-**Option C: command line**
-```
-./gradlew assembleDebug
-```
-The APK appears in `app/build/outputs/apk/debug/`.
-
 ## Using the app
 
 1. Join the same Wi-Fi as your PC (or turn on your phone's hotspot and connect the PC to it).
